@@ -44,6 +44,30 @@ function toTime(unixTime) {
     return formattedTime;
 }
 
+
+// function to pull on click
+$("#brewery-button").click(function(event) {
+    event.preventDefault();
+// URL for API call
+BrewQuery = "https://api.openbrewerydb.org/breweries/search?query="+brewSearchVal;
+
+// Pulls the value from the input field
+let brewSearchVal = $("#brewery-search").val();
+
+// AJAX call for getting JSON object
+$.ajax({
+    url: BrewQuery,
+    method: "GET"
+    // The promise
+  }).then(function(response) {
+    console.log(response);
+
+
+});
+    
+  
+});
+
 $.ajax({
     url: queryURL,
     method: "GET"
