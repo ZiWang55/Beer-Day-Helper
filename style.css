@@ -25,6 +25,7 @@ main {
 }
 
 .container {
+    width: auto;
   text-align: center;
   padding: 40px;
   margin-left: auto;
