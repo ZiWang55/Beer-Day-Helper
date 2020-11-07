@@ -35,3 +35,4 @@ $.ajax({
     //console.log(response.current.wind_speed);
     console.log("Wind speed: " + toMPH(response.current.wind_speed) + " mph");
     console.log(toTime(response.current.sunset));
+});

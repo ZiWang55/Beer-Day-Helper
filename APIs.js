@@ -6,7 +6,7 @@
 
 
 
-let queryURL = "https://api.openbrewerydb.org/breweries?by_city=san_diego";
+let queryURL = "https://api.openbrewerydb.org/breweries?by_city=";
 
 $.ajax({
   url: queryURL,
