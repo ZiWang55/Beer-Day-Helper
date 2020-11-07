@@ -1,16 +1,9 @@
-// let breweryName = document.querySelector("#brewery-name");
-// let breweryType = document.querySelector("#brewery-type");
-// let breweryAddress = document.querySelector("brewery-address");
-// let breweryPhone = document.querySelector("brewery-phone");
-// let breweryWebsite = document.querySelector("#brewery-website");
-
-
-
 
 
 function breweryAPICall(queryName){
   
   let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName;
+  let returnCoords;
 
   $.ajax({
     url: queryURL,
@@ -29,18 +22,19 @@ function breweryAPICall(queryName){
     // Transfer content to HTML
     console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
-    $("#brewery-type").text(response.name);
-    $("#brewery-address").text(response.name);
-    $("#brewery-phone").text(response.name);
-    $("#brewery-website").text(response.name);
+    $("#brewery-type").text(brewery.brewery_type);
+    $("#brewery-address").text(brewery.street);
+    $("#brewery-phone").text(brewery.phone);
+    $("#brewery-website").text(brewery.website_url);
+    
+    console.log(brewery.longitud);
+    console.log(brewery.latitud);
+
+    returnCoords = [brewery.latitud,brewery.longitud];
+
+    return returnCoords;
   
-  // Log the data in the console as well
-  //   console.log("Wind Speed: " + response.wind.speed);
-  //   console.log("Humidity: " + response.main.humidity);
-  //   console.log("Temperature (F): " + tempF);
   });
 
 
 }  
-
-
