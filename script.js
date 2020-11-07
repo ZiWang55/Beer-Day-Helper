@@ -52,7 +52,7 @@ $("#brewery-button").click(function(event) {
 BrewQuery = "https://api.openbrewerydb.org/breweries/search?query="+brewSearchVal;
 
 // Pulls the value from the input field
-let brewSearchVal = $("#brewery-search").val();
+let brewSearchVal = $("#brewery-input").val();
 
 // AJAX call for getting JSON object
 $.ajax({
