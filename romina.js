@@ -30,10 +30,10 @@ function breweryAPICall(queryName){
     // Transfer content to HTML
     console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
-    $("#brewery-type").text(response.name);
-    $("#brewery-address").text(response.name);
-    $("#brewery-phone").text(response.name);
-    $("#brewery-website").text(response.name);
+    $("#brewery-type").text(brewery.brewery_type);
+    $("#brewery-address").text(brewery.street);
+    $("#brewery-phone").text(brewery.phone);
+    $("#brewery-website").text(brewery.website_url);
 
     console.log(brewery.longitude);
     console.log(brewery.latitude);
