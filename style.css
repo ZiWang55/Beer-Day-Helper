@@ -7,8 +7,10 @@ body {
 
 .nav-wrapper {
     background-color: #46344E;
+    
 }
 
-.card-title {
-    background-color: #;
+#brewery-button {
+    background-color: #faed26;
+    color: #46344E;
 }
