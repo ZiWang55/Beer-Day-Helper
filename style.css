@@ -15,6 +15,7 @@ main {
   }
 
 .nav-wrapper {
+    font-weight: bold;
   background-color: #46344e;
 }
 
