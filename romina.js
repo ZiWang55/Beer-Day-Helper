@@ -11,6 +11,7 @@
 function breweryAPICall(queryName){
   
   let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName;
+  let returnCoords;
 
   $.ajax({
     url: queryURL,
@@ -33,14 +34,11 @@ function breweryAPICall(queryName){
     $("#brewery-address").text(response.name);
     $("#brewery-phone").text(response.name);
     $("#brewery-website").text(response.name);
-  
-  // Log the data in the console as well
-  //   console.log("Wind Speed: " + response.wind.speed);
-  //   console.log("Humidity: " + response.main.humidity);
-  //   console.log("Temperature (F): " + tempF);
+
+    console.log(brewery.longitude);
+    console.log(brewery.latitude);
+
+    weatherAPICall(brewery.latitude, brewery.longitude);
   });
 
-
 }  
-
-
