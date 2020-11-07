@@ -2,24 +2,24 @@
 I do plan on doing background IMG brewery related */
 
 body {
-    /* background-image: url(assets/bar-209148_1920.jpg); */
-    /* background-size: cover; */
-    background-color: #5a5560;
+  /* background-image: url(assets/bar-209148_1920.jpg); */
+  /* background-size: cover; */
+  background-color: #5a5560;
 }
 
 .nav-wrapper {
-    background-color: #46344E;
+  background-color: #46344e;
 }
 
 #brewery-button {
-    background-color: #faed26;
-    color: #46344E;
+  background-color: #faed26;
+  color: #46344e;
 }
 
 .container {
-    text-align: center;
-    padding: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-color: #9d8d8f; */
+  text-align: center;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #9d8d8f; */
 }
