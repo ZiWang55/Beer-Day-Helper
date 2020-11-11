@@ -35,6 +35,7 @@ function breweryAPICall(queryName){
     let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
     $("#brewery-phone").text(breweryPhone);
     $("#brewery-website").text(brewery.website_url);
+    $("#brewery-website").attr("href", brewery.website_url);
 
     // Google map link
     let mapLink = "https://www.google.com/maps/search/?api=1&query=" + brewery.street + " " + brewery.city;
