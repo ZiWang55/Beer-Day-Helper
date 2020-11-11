@@ -29,15 +29,24 @@ function breweryAPICall(queryName){
     // Transfer content to HTML
     console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
-    $("#brewery-type").text(response.name);
-    $("#brewery-address").text(response.name);
-    $("#brewery-phone").text(response.name);
-    $("#brewery-website").text(response.name);
-  
-  // Log the data in the console as well
-  //   console.log("Wind Speed: " + response.wind.speed);
-  //   console.log("Humidity: " + response.main.humidity);
-  //   console.log("Temperature (F): " + tempF);
+    $("#brewery-type").text(brewery.brewery_type);
+    $("#brewery-address").text(brewery.street);
+    $("#brewery-phone").text(brewery.phone);
+    $("#brewery-website").text(brewery.website_url);
+
+    // Google map link
+    let BrewMapLat = brewery.latitude
+    let BrewMapLon = brewery.longitude
+
+    
+    let directionLink = "https://www.google.com/maps/search/?api=1&query="+BrewMapLat+","+BrewMapLon;
+    console.log(directionLink)
+
+    console.log(brewery.longitude);
+    console.log(brewery.latitude);
+
+    weatherAPICall(brewery.latitude, brewery.longitude);
+    return brewery;
   });
 
 

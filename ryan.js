@@ -14,8 +14,8 @@ $("#brewery-button").click(function(event) {
     let brewSearchVal = $("#brewery-input").val();
     
     breweryAPICall(brewSearchVal)
-// URL for API call
 
+// URL for API call
 
 
 // AJAX call for getting JSON object
@@ -27,5 +27,8 @@ $("#brewery-button").click(function(event) {
 //     console.log(response);
 // });
     
-  
+
 });
+
+    
+
