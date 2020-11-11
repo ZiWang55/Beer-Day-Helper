@@ -77,4 +77,4 @@ function weatherAPICall (breweryLat, breweryLon) {
     });
 }
 
-weatherAPICall(44.98, -93.26);
+//weatherAPICall(44.98, -93.26);
