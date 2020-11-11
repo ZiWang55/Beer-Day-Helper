@@ -1,3 +1,19 @@
+// Gets user location for default weather data
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+}
+// Calls weatherAPI to populate weather divs with weather at user's location
+function showPosition(position) {
+  weatherAPICall(position.coords.latitude, position.coords.longitude);
+}
+
+getLocation();
+
+
 // Function to convert degrees Kelvin to degrees Farenheit
 function toFar(degreesKelvin) {
     let degreesFar = ((degreesKelvin - 273.15) * (9 / 5) + 32).toFixed(2);

@@ -36,6 +36,10 @@ main {
   background-color: #9b786f;
   padding: 10px;
 }
+/* brewery input */
+.input-label {
+  pointer-events: none;
+}
 
 /* @media screen and (max-width: 800px) { */
 
