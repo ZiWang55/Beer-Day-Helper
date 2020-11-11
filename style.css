@@ -1,5 +1,3 @@
-/* background color for now
-I do plan on doing background IMG brewery related */
 
 body {
   /* background-image: url(assets/bar-209148_1920.jpg); */
@@ -11,29 +9,38 @@ body {
 }
 
 main {
-    flex: 1 0 auto;
-  }
-
+  flex: 1 0 auto;
+}
+/* navbar */
 .nav-wrapper {
-    font-weight: bold;
+  font-weight: bold;
   background-color: #46344e;
 }
-
+/* button */
 #brewery-button {
   background-color: #faed26;
   color: #46344e;
 }
-
+/* main container */
 .container {
+  width: auto;
   text-align: center;
   padding: 40px;
   margin-left: auto;
   margin-right: auto;
   /* background-color: #9d8d8f; */
 }
-
+/* footer */
 .page-footer {
-    color: #faed26;
-    background-color: #9b786f;
-    padding: 10px;
+  color: #faed26;
+  background-color: #9b786f;
+  padding: 10px;
 }
+/* brewery input */
+.input-label {
+  pointer-events: none;
+}
+
+/* @media screen and (max-width: 800px) { */
+
+/* } */
