@@ -34,6 +34,7 @@ function breweryAPICall(queryName){
     $("#brewery-address").text(brewery.street);
     $("#brewery-phone").text(brewery.phone);
     $("#brewery-website").text(brewery.website_url);
+    $("#brewery-website").attr("href", brewery.website_url);
 
     console.log(brewery.longitude);
     console.log(brewery.latitude);
