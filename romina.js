@@ -37,15 +37,10 @@ function breweryAPICall(queryName){
     $("#brewery-website").text(brewery.website_url);
 
     // Google map link
-    let BrewMapLat = brewery.latitude
-    let BrewMapLon = brewery.longitude
+    let mapLink = "https://www.google.com/maps/search/?api=1&query=" + brewery.street + " " + brewery.city;
 
-    
-    let directionLink = "https://www.google.com/maps/search/?api=1&query="+BrewMapLat+","+BrewMapLon;
-    console.log(directionLink)
-
-    console.log(brewery.longitude);
-    console.log(brewery.latitude);
+    $("#brewery-directions").text("Directions");
+    $("#brewery-directions").attr("href", mapLink);
 
     weatherAPICall(brewery.latitude, brewery.longitude);
     return brewery;
