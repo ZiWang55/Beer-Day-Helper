@@ -30,9 +30,10 @@ function breweryAPICall(queryName){
     // Transfer content to HTML
     console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
-    $("#brewery-type").text(brewery.brewery_type);
+    $("#brewery-type").text("Brewery type: " + titleCase(brewery.brewery_type));
     $("#brewery-address").text(brewery.street);
-    $("#brewery-phone").text(brewery.phone);
+    let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+    $("#brewery-phone").text(breweryPhone);
     $("#brewery-website").text(brewery.website_url);
 
     // Google map link
