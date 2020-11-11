@@ -35,12 +35,20 @@ function breweryAPICall(queryName){
     let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
     $("#brewery-phone").text(breweryPhone);
     $("#brewery-website").text(brewery.website_url);
-    $("#brewery-website").attr("href", brewery.website_url);
+
+    // Google map link
+    let BrewMapLat = brewery.latitude
+    let BrewMapLon = brewery.longitude
+
+    
+    let directionLink = "https://www.google.com/maps/search/?api=1&query="+BrewMapLat+","+BrewMapLon;
+    console.log(directionLink)
 
     console.log(brewery.longitude);
     console.log(brewery.latitude);
 
     weatherAPICall(brewery.latitude, brewery.longitude);
+    return brewery;
   });
 
 }  
