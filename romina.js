@@ -10,7 +10,7 @@
 
 function breweryAPICall(queryName){
   
-  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName;
+  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName+"&per_page=2"
   let returnCoords;
 
   $.ajax({
