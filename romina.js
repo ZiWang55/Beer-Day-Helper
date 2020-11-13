@@ -2,7 +2,7 @@
 
 function breweryAPICall(queryName){
   
-  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName;
+  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName+"&per_page=2"
   let returnCoords;
 
   $.ajax({
@@ -35,6 +35,20 @@ function breweryAPICall(queryName){
     return returnCoords;
   
   });
+    $("#brewery-type").text("Brewery type: " + titleCase(brewery.brewery_type));
+    $("#brewery-address").text(brewery.street);
+    let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+    $("#brewery-phone").text(breweryPhone);
+    $("#brewery-website").text(brewery.website_url);
+    $("#brewery-website").attr("href", brewery.website_url);
 
+    // Google map link
+    let mapLink = "https://www.google.com/maps/search/?api=1&query=" + brewery.street + " " + brewery.city;
 
+    $("#brewery-directions").text("Directions");
+    $("#brewery-directions").attr("href", mapLink);
+
+    weatherAPICall(brewery.latitude, brewery.longitude);
+    return brewery;
+  });
 }  

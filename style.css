@@ -1,0 +1,46 @@
+
+body {
+  /* background-image: url(assets/bar-209148_1920.jpg); */
+  /* background-size: cover; */
+  background-color: #5a5560;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+/* navbar */
+.nav-wrapper {
+  font-weight: bold;
+  background-color: #46344e;
+}
+/* button */
+#brewery-button {
+  background-color: #faed26;
+  color: #46344e;
+}
+/* main container */
+.container {
+  width: auto;
+  text-align: center;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #9d8d8f; */
+}
+/* footer */
+.page-footer {
+  color: #faed26;
+  background-color: #9b786f;
+  padding: 10px;
+}
+/* brewery input */
+.input-label {
+  pointer-events: none;
+}
+
+/* @media screen and (max-width: 800px) { */
+
+/* } */
