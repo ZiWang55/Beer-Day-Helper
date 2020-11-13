@@ -14,25 +14,27 @@ function breweryAPICall(queryName){
     brewery = response[0];
   
     // Log the queryURL
-    console.log(queryURL);
+    //console.log(queryURL);
   
     // Log the resulting object
-    console.log(response);
+    console.log(brewery);
   
     // Transfer content to HTML
-    console.log(brewery.name);
+    //console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
     $("#brewery-type").text(brewery.brewery_type);
     $("#brewery-address").text(brewery.street);
+    let breweryPostal = brewery.postal_code;
+    $("#brewery-city").text(brewery.city + ", " + brewery.state + " " + breweryPostal.substring(0,5));
     $("#brewery-phone").text(brewery.phone);
     $("#brewery-website").text(brewery.website_url);
     
-    console.log(brewery.longitude);
-    console.log(brewery.latitude);
+    //console.log(brewery.longitude);
+    //console.log(brewery.latitude);
 
     returnCoords = [brewery.latitude,brewery.longitude];
   
-    console.log("brewery: "+brewery);
+    //console.log("brewery: "+brewery);
     $("#brewery-type").text("Brewery type: " + titleCase(brewery.brewery_type));
     $("#brewery-address").text(brewery.street);
     let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
@@ -46,6 +48,10 @@ function breweryAPICall(queryName){
     $("#brewery-directions").text("Directions");
     $("#brewery-directions").attr("href", mapLink);
     
+    $("#brewery-address").attr("href", mapLink);
+    $("#brewery-city").attr("href", mapLink);
+
+
     currentBrewery = brewery.name;
     localStorage.setItem('storedBrewery', JSON.stringify(currentBrewery));
     breweryHistory = updateArray(breweryHistory, currentBrewery);
