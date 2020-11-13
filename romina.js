@@ -44,6 +44,7 @@ function breweryAPICall(queryName){
     $("#brewery-directions").attr("href", mapLink);
 
     currentBrewery = brewery.name;
+    localStorage.setItem('storedBrewery', JSON.stringify(currentBrewery));
     breweryHistory = updateArray(breweryHistory, currentBrewery);
     localStorage.setItem('storedHistory', JSON.stringify(breweryHistory));
     updateHistoryUL(breweryHistory);

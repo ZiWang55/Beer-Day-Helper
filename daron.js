@@ -66,11 +66,8 @@ function updateArray(array, newValue){
   return array;
 }
 
-breweryHistory = updateArray(breweryHistory, currentBrewery);
-localStorage.setItem('storedHistory', JSON.stringify(breweryHistory));
-
 //if we have something saved as the current brewery, load it
 if(currentBrewery !== ""){
-  console.log("Getting weather on page load");
+  console.log("Getting brewery on page load");
   breweryAPICall(currentBrewery);
 }
