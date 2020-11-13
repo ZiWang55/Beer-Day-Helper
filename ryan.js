@@ -14,6 +14,7 @@ $("#brewery-button").click(function(event) {
     let brewSearchVal = $("#brewery-input").val();
     
     breweryAPICall(brewSearchVal);
+    
 
 // URL for API call
 
