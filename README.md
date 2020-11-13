@@ -1,11 +1,11 @@
-# Weather Dashboard
+# BeerDay Helper
 
-<img width="956" alt="Beer Passport" src="https://user-images.githubusercontent.com/71299608/99009905-7ce3b600-250e-11eb-83f0-eb4140657269.png">
+![Gif](./assets/BeerDayHelper.gif)
 
 # Overview
 Welcome to Beer passport! This website was established for all beer lovers. This application allows the user to find the best crafted breweries located in any city or town they want. The user will have the option to type in their preferred brewery and the brewer's company name, address and website will pop up. WeatherAPI was used to generate the current weather time and temperature of said Brewery location. 
 
-Languages/tools used:
+### Languages/tools used:
 - HTML
 - CSS
 - Javascript
@@ -17,14 +17,14 @@ Languages/tools used:
 
 ## User Story
 
-AS A
-- Beer Enthusiast
-I WANT
-- Brewery Info
-- Weather Info
-- Google Maps Link
-SO THAT
-- I can plan and enjoy my beer days
+* AS A
+    - Beer Enthusiast
+* I WANT
+    - Brewery Info
+    - Weather Info
+    - Google Maps Link
+* SO THAT
+    - I can plan and enjoy my beer days
 
 ## Installation
 
