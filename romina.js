@@ -1,11 +1,3 @@
-// let breweryName = document.querySelector("#brewery-name");
-// let breweryType = document.querySelector("#brewery-type");
-// let breweryAddress = document.querySelector("brewery-address");
-// let breweryPhone = document.querySelector("brewery-phone");
-// let breweryWebsite = document.querySelector("#brewery-website");
-
-
-
 
 
 function breweryAPICall(queryName){
@@ -30,6 +22,19 @@ function breweryAPICall(queryName){
     // Transfer content to HTML
     console.log(brewery.name);
     $("#brewery-name").text(brewery.name);
+    $("#brewery-type").text(brewery.brewery_type);
+    $("#brewery-address").text(brewery.street);
+    $("#brewery-phone").text(brewery.phone);
+    $("#brewery-website").text(brewery.website_url);
+    
+    console.log(brewery.longitud);
+    console.log(brewery.latitud);
+
+    returnCoords = [brewery.latitud,brewery.longitud];
+
+    return returnCoords;
+  
+  });
     $("#brewery-type").text("Brewery type: " + titleCase(brewery.brewery_type));
     $("#brewery-address").text(brewery.street);
     let breweryPhone = brewery.phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
@@ -51,6 +56,5 @@ function breweryAPICall(queryName){
 
     weatherAPICall(brewery.latitude, brewery.longitude);
     return brewery;
-  });
+  };
 
-}  

@@ -20,7 +20,6 @@ $("#brewery-button").click(function(event) {
 
 // URL for API call
 
-
 // AJAX call for getting JSON object
 // $.ajax({
 //     url: BrewQuery,
