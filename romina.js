@@ -10,7 +10,7 @@
 
 function breweryAPICall(queryName){
   
-  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName+"&per_page=2"
+  let queryURL = "https://api.openbrewerydb.org/breweries/search?query="+queryName+"&per_page=1"
   let returnCoords;
 
   $.ajax({
@@ -42,6 +42,11 @@ function breweryAPICall(queryName){
 
     $("#brewery-directions").text("Directions");
     $("#brewery-directions").attr("href", mapLink);
+
+    currentBrewery = brewery.name;
+    breweryHistory = updateArray(breweryHistory, currentBrewery);
+    localStorage.setItem('storedHistory', JSON.stringify(breweryHistory));
+    updateHistoryUL(breweryHistory);
 
     weatherAPICall(brewery.latitude, brewery.longitude);
     return brewery;
