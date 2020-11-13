@@ -21,6 +21,10 @@ main {
   background-color: #faed26;
   color: #46344e;
 }
+.sidebar-button {
+  background-color: #faed26;
+  color: #46344e;
+}
 /* main container */
 .container {
   width: auto;
