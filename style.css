@@ -45,6 +45,13 @@ main {
   pointer-events: none;
 }
 
-/* @media screen and (max-width: 800px) { */
-
-/* } */
+@media screen and (max-width: 411px) {
+ 
+  /* .nav-wrapper {
+    width: 100%;
+  } */
+ .brand-logo {
+   width: 100%;
+ }
+  
+}
