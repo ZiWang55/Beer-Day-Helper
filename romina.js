@@ -50,5 +50,5 @@ function breweryAPICall(queryName){
 
     weatherAPICall(brewery.latitude, brewery.longitude);
     return brewery;
-  });
-}  
+  };
+
