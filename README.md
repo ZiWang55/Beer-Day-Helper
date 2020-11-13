@@ -18,13 +18,13 @@ Languages/tools used:
 ## User Story
 
 AS A
-  Beer Enthusiast
+- Beer Enthusiast
 I WANT
-  Brewery Info
-  Weather Info
-  Google Maps Link
+- Brewery Info
+- Weather Info
+- Google Maps Link
 SO THAT
-  I can plan and enjoy my beer days
+- I can plan and enjoy my beer days
 
 ## Installation
 
